@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./goodbye_world
+    ports:
+      - 8081:5000
