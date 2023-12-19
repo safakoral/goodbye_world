@@ -1,5 +1,10 @@
-FROM python:3.9.18-alpine
-WORKDIR /app
-COPY goodbye_world.py .
-RUN pip install --no-cache-dir Flask
-CMD ["python", "./goodbye_world.py"]
+FROM python
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py .
+
+CMD ["python", "./app.py"]
