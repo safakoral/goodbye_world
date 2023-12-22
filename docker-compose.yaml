@@ -4,8 +4,8 @@ services:
     build:
       context: ./goodbye_world
     ports:
-      - 8081:5001
+      - 8081:5000
     environment:
       - FLASK_APP=app.py
       - FLASK_RUN_HOST=0.0.0.0:8081
-      - FLASK_RUN_PORT=5001
+      - FLASK_RUN_PORT=5000
